@@ -1,0 +1,30 @@
+<p >{{deviceType}}</p>
+<mat-toolbar [ngClass] ="deviceType==='Desktop'? 'stiky':'stiky-mobile'" style="background-color:rgb(18, 39, 83);border-radius: 15px;">
+  <a  href="#" class="myref"  (click)="navigateToSection('AAA')">{{myName}}</a>
+  <ng-container *ngIf="deviceType==='Mobile'">
+    <span class="example-spacer"></span>
+    <button mat-icon-button   [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>#Education</button>
+        <button mat-menu-item>#About</button>
+        <button mat-menu-item>#Skills</button>
+        <button mat-menu-item>#Experience</button>
+        <button mat-menu-item>#Projects</button>
+        <button mat-menu-item><a href="https://github.com/AndrewAndrusenko" class="myref" style="font-size: small;">Github Profile</a></button>
+      </mat-menu>
+    </button>
+  </ng-container>
+  <ng-container *ngIf="deviceType==='Desktop'">
+    <span class="example-spacer"></span>
+    <a href="#Education" class="myref" (click)="navigateToSection('Education')">Education</a>
+    <span class="example-spacer"></span>
+    <a href="#About" class="myref" (click)="navigateToSection('About')">About</a>
+    <span class="example-spacer"></span>
+    <a href="#Skills" class="myref" (click)="navigateToSection('Skills')">Skills</a>
+    <span class="example-spacer"></span>
+    <a href="#Experience" class="myref" (click)="navigateToSection('Experience')">Experience</a>
+    <span class="example-spacer"></span>
+    <a href="#Projects" class="myref" (click)="navigateToSection('Projects')">Projects</a>
+    <span class="example-spacer"></span>
+   <a href="https://github.com/AndrewAndrusenko" class="myref" style="font-size: large; font-weight: bold;color: rgb(181, 142, 218); border-color: rgb(178, 135, 217);border-width:1px;border-style: solid;border-radius: 15px;padding: 1%;">Github Profile</a>
+  </ng-container>

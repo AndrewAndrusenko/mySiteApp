@@ -1,0 +1,70 @@
+.deskTop {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.mobile {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.imgDesk {
+  width: 20%;
+  height: 20%;
+}
+.imgMobile {
+  margin-left: 15vw;
+  margin-top: 1vh;
+  width:55w;
+  height: 50vh;
+}
+
+.experience {
+  color:  rgb(156, 158, 158);
+  align-items: center;
+  width: 40vw;
+  height: 30vh;
+  background-color: black;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 2%;
+}
+.experience p{
+text-align: center;
+  font-size: 2em;
+  line-height: 1.2;
+
+}
+.experience h3 {
+  font-size: 3em;
+  text-align: center;
+}
+.myFont {
+  color:  rgb(156, 158, 158);
+
+}
+ .side2 {
+  background-color: rgb(64, 88, 88);
+  justify-self:flex-end;
+}
+.AAM-core-info {
+  text-align: center;
+ }
+ .my-foto {
+  -webkit-box-shadow:0 0 20px  greenyellow;
+  -moz-box-shadow: 0 0 20px  greenyellow;
+  box-shadow:0 0 20px  greenyellow;
+ }
+#cursor {
+  animation: blink 1s linear infinite;
+  color: blue;
+  font-size: 1em; 
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
