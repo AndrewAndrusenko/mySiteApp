@@ -10,13 +10,15 @@ import {MatIconModule} from '@angular/material/icon'
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { SkillsBoxComponent } from './skills-box/skills-box.component';
-import { AboutSectionComponent } from './about-section/about-section.component'
+import { AboutSectionComponent } from './about-section/about-section.component';
+import { TypingAnimationComponent } from './typing-animation/typing-animation.component'
 @NgModule({
   declarations: [
     AppComponent,
     MainMenuComponent,
     SkillsBoxComponent,
-    AboutSectionComponent
+    AboutSectionComponent,
+    TypingAnimationComponent
   ],
   imports: [
     BrowserModule,

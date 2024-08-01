@@ -1,0 +1,13 @@
+#cursor {
+  animation: blink 1s linear infinite;
+  color: blue;
+  font-size: 1.3em; 
+}
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}

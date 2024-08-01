@@ -33,6 +33,7 @@ export class MainMenuComponent {
     console.log(this.deviceType);
   }
   navigateToSection(anchor:string):void {
+    console.log('anchor',anchor);
     this.viewportScroller.scrollToAnchor(anchor);
   }
 }

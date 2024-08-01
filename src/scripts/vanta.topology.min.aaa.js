@@ -424,7 +424,7 @@
           }
           (t.setup = function () {
             e.initP5(t),
-              t.frameRate(10)
+              t.frameRate(10),
               t.smooth(),
               t.noStroke(),
               (function () {

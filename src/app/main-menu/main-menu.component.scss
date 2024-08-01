@@ -1,20 +1,45 @@
-.example-spacer {
-  flex: 1 1 auto;
+.wrapper {
+  width: 100%; 
+  display: flex; 
+  justify-content:center;
 }
-.stiky {  
-   position: fixed;
-  top: 3vh;
-   width: 60%;
+.mat-toolbar {
+  margin-top: 0.2vh;
+  background-color:rgb(18, 39, 83);
+  border-radius: 1%/15%;
+  position: fixed;
+  top:0;
+  width: 80vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
-.stiky-mobile {  
-   position: fixed;
-  top: 3vh;
-   width: 95vw;
+@media (min-width:2000px) {
+  .mat-toolbar {
+    width: 62vw;
+  }
 }
-.apan a {
-  color: white;
+.desktop-toolbar-wrapper {
+ display: inline-flex; 
+ width: 80vw;
+ justify-content: space-around;
 }
-.myref {
-  color:   rgb(125, 204, 204);;
+.desktop-toolbar-wrapper a {
+  color:   rgb(125, 204, 204);
   text-decoration:none;
+}
+.desktop-toolbar-wrapper a:hover {
+  text-decoration:underline;
+  color:  rgb(160, 225, 225);
+  text-decoration-thickness: 0.15em;
+  text-underline-offset:0.2em;
+  transform: scale(1.05);
+}
+.gitRef {
+  font-size: large; 
+  font-weight: bold;
+  border-width:1px;
+  border-style: solid;
+  border-radius: 5%/15%;
+  padding-left:1%;
+  padding-right: 1%;
 }

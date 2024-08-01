@@ -1,8 +1,5 @@
-import { ViewportScroller } from '@angular/common';
-import { Element } from '@angular/compiler';
-import { AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { of, Subject, tap } from 'rxjs';
 declare var VANTA:any;
 @Component({
   selector: 'app-root',
@@ -11,18 +8,28 @@ declare var VANTA:any;
 })
 export class AppComponent implements AfterViewInit
 {
-  timerTyping: ReturnType<typeof setTimeout> []=[];
+
   title = 'mySiteApp';
   deviceType:string=''
   name = 'Angular';
-  expertiseSet:string[] =['Full Stack Developer','Financial Expert','Frontend Developer', 'Backend Developer'];
-  nextExpert:Subject<number> = new Subject();
-  expertInd:number=0;
-  expertDesc:string;
-  cursor:string='|';
+  bg :any
+  canvas: HTMLCollectionOf<HTMLCanvasElement>;
+  canvas2: HTMLCanvasElement;
+  @ViewChildren('reveal') sectionsToReveal :QueryList<ElementRef>
+  @HostListener('document:scroll', ['$event'])
+  onScrollReveal(event: Event) {  
+     this.sectionsToReveal.forEach(el=>{
+      let elTop = el.nativeElement.getBoundingClientRect().top
+      let windowTop = window.innerHeight
+      if (windowTop - 150 > elTop) {
+        el.nativeElement.classList.add('active')
+      } else {
+        el.nativeElement.classList.remove('active')
+      }
+     })
+    }
   constructor (
     private deviceService: DeviceDetectorService,
-    private viewportScroller:ViewportScroller
   ){
     switch (true) {
       case this.deviceService.isDesktop():
@@ -39,9 +46,32 @@ export class AppComponent implements AfterViewInit
       break;
     }
   }
+  ngOnInit(): void {
+/*     VANTA.TOPOLOGY({
+      el: "#animated-background",
+      mouseControls: false,
+      touchControls: false,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    }) */
+  }
   ngAfterViewInit(): void {
-    VANTA.TOPOLOGY({
-      el: "#vanta",
+/*     VANTA.WAVES({
+      el: "#animated-background",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x43104
+    }) */
+/*     VANTA.NET({
+      el: "#animated-background",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
@@ -49,38 +79,14 @@ export class AppComponent implements AfterViewInit
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00
-    })
-    this.typingSubscription()
-    setTimeout(() => {this.nextExpert.next(this.expertInd)}, 200);
+    }) */
   }
-  typingSubscription() {
-    this.nextExpert.subscribe(indExp=>{
-      console.log('new expert',this.expertiseSet[indExp]);
-      let strLng:number = this.expertiseSet[indExp].length
-      for (let index = 0; index <= strLng*2 ; index++) {
-        this.timerTyping.push (setTimeout (()=>{
-           index===strLng*2? this.nextExpert.next(this.expertInd=indExp===this.expertiseSet.length-1? 0: indExp+1):null;
-           this.expertDesc = this.expertiseSet[indExp].slice(0, index + (index-strLng) *2* ~~(index/strLng)*-1  )
-         },index<=strLng? index*180 :strLng*300 + (index-strLng)*100))
-
-       } 
-    })
-  }
-  toggleTyping() {
-    if (this.cursor==='|') {
-      this.timerTyping.forEach(i=>clearTimeout(i));
-      console.log('[this.expertInd',this.expertInd);
-      this.expertDesc=this.expertiseSet[this.expertInd];
-      this.cursor=''
-    } else {
-      this.nextExpert.next(this.expertInd=this.expertiseSet.length===this.expertInd+1? 0:this.expertInd+1)
-      this.cursor='|'
-    }
-  }
-  
-  navigateToSection(anchor:string):void {
-    this.viewportScroller.scrollToAnchor(anchor);
+  stopAnimation() {
+    this.canvas = document.getElementsByClassName('vanta-canvas') as HTMLCollectionOf<HTMLCanvasElement>
+    this.canvas2 = document.getElementById('defaultCanvas0') as HTMLCanvasElement
+    this.bg = (document.getElementById('animated-background') as HTMLElement )
+    this.bg.removeChild(this.canvas2)
+    this.bg.removeChild(this.canvas[0])
   }
   openPDF (url:string) {window.open(url,'_blank')}
-
 }

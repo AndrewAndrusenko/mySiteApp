@@ -1,31 +1,38 @@
-.main {
-  color: rgb(156, 158, 158);
+.skill-main-container {
+  color: var(--mainFontColor);
   padding-top: 2vh;
   padding-bottom: 2vh;
+  text-align: center;
 }
-.skill-contrainer {
+.skill-main-container h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+}
+.skill-main-container h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+.skill-boxes-contrainer {
   display: flex;
   gap: 4vw;
-
 }
-.s-type{
-  text-align: center;
+.skill-boxes-contrainer h2 {
   font-size: 2.5em;;
   margin-top: 2%;
-  margin-bottom: 2vh ;
+  margin-bottom: 1vh ;
 }
-.skillBox {
+.skill-box {
   width: 30vw;
   height: 30vh;
   border-width: 2px;
   border-radius: 15px;
   border-style: solid;
   background-color: rgb(16, 17, 17);
-  -webkit-box-shadow:0 0 20px rgb(98, 158, 24); 
-  -moz-box-shadow: 0 0 20px rgb(24, 158, 104);
-  box-shadow:0 0 20px rgb(24, 158, 104);
+  -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
+  -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
+  box-shadow:0 0 1vw  var(--boxShadowColor);
 }
-.skill-card {
+.skill-item {
   display:inline-flex;
   margin-left: 0.5vw;
   padding-left: 2%;
@@ -39,9 +46,8 @@
   border-radius: 15px;
   align-items: center; 
   min-width: 7vw;
-  
 }
-.skill-card p{
+.skill-item p{
   font-size: bold;
   margin-left: 5%;
   margin-top:5%
