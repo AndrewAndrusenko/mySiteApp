@@ -1,16 +1,30 @@
+<div class="foto-wrap">
+  <ng-container *ngIf="deviceType!=='Desktop'">
+    <img class="main-foto" mat-card-image src="../assets/velo_green2.jpg">
+  </ng-container>
+</div>
 <div class="about-main-container">
   <section class="about-text-container">
-    <h1>Hi, I am Andrey Andusenko</h1>
-    <app-typing-animation></app-typing-animation>
-      <span>I am a highly motivated developer with extensive financial expertise and a passion for learning</span><br><br>
+    <ng-container *ngIf="deviceType==='Desktop'">
+      <h1 style="margin: 0;">Hi, I am Andrey Andusenko</h1>
+      <app-typing-animation></app-typing-animation>
+    </ng-container>
+    <ng-container *ngIf="deviceType!=='Desktop'">
+      <h1 style="margin: 0;">Hi, I am</h1>
+      <h1 style="margin: 0;" >Andrey Andusenko</h1>
+      <div class="typing-mobile"><app-typing-animation></app-typing-animation></div>
+    </ng-container>
+      <span>I am a highly motivated developer with extensive financial expertise and a passion for learning.</span><br><br>
       <span>I have created from scratch a brand-new 
-        <button class="navigate-button AAM" mat-raised-button (click)="navigateToSection('aam-core')">Asset Management Platform</button> 
+         <a [routerLink]=""  (click)="navigateToSection('aam-core')" >Asset Management Platform</a>
         based on Decoupled, RESTful API, Angular - NodeJS - PostgreSQL architecture.
       </span><br>
       <span>The platform covers 
-        <button class="navigate-button" mat-raised-button (click)="navigateToSection('BP-Charts')">full investment cycle</button> 
+        <a  [routerLink]="" (click)="navigateToSection('BP-Charts')">full investment cycle</a> 
         and provides comprehensive financial accounting system.</span><br><br>
       <span>By presenting my project I intend to demonstrate my ability to be efficient part of any team and be ready take any challenge.</span><br><br>
   </section>
+  <ng-container *ngIf="deviceType==='Desktop'">
     <img  mat-card-image src="../assets/velo_green2.jpg">
+  </ng-container>
 </div>

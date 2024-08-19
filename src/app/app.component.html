@@ -3,13 +3,16 @@
     <app-main-menu></app-main-menu>
   </div>
   <div [ngClass]="deviceType==='Desktop'? 'desktop':'mobile'">
-    <section id="about">
-      <app-about-section></app-about-section>
+    <section id="about" [ngClass]="deviceType==='Desktop'? 'about-desktop':'about-mobile'">
+      <app-about-section [deviceType]="deviceType"></app-about-section>
     </section>
     <section #reveal id="skills" class="reveal">
       <app-skills-box></app-skills-box>  
     </section>
-    <section  #reveal id="experience" class="reveal">
+    <section #reveal id="experience" class="reveal">
+      <app-timeline-experience> </app-timeline-experience>
+    </section>
+<!--     <section  #reveal id="experienceOld" class="reveal">
       <h1>Experience</h1>
       <section class="experience-card" >
         <h3>Exerience 1</h3>
@@ -23,14 +26,15 @@
         <h3>Exerience 3</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quia necessitatibus laudantium nam quam accusantium vitae, veritatis, veniam illum qui nostrum ratione quis amet adipisci?</p>
       </section>
-    </section>
+    </section> -->
     <section #reveal id="aam-core" class="reveal">
       <div class="title-container" style="display: flex;">
-      <img src="../assets/logo.png" alt="">
-      <div style="display: flexbox; margin-left: 1vw; padding-top: 10px;">
-      <h3 style=" font-size: 3em;color:rgb(156, 158, 158);">Asset Management Platform</h3>
-      <h3 style=" font-size: 3em;color:rgb(156, 158, 158);">Core Architecture and Functionality</h3>
-    </div>
+        <img src="../assets/logo.png" alt="">
+        <div style="display: flexbox; margin-left: 1vw; padding-top: 10px;">
+          <h3>Asset Management Platform</h3>
+          <h3>Core Architecture and Functionality</h3>
+        </div>
+        <a href="https://parrot-organic-overly.ngrok-free.app/login" target="_blank">Feel free to test the platform</a>
       </div>
       <!-- <img src="../assets/Architecture Chart-App_light.png" alt=""> -->
       <img src=" ../assets/HTML for site Architecture Chart-App CV.png" alt="">

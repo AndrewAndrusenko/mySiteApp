@@ -13,11 +13,6 @@
   padding-left: 1vw;
   padding-right: 1vw;
 }
-@media (min-width:2000px) {
-  .mat-toolbar {
-    width: 62vw;
-  }
-}
 .desktop-toolbar-wrapper {
  display: inline-flex; 
  width: 80vw;
@@ -26,6 +21,7 @@
 .desktop-toolbar-wrapper a {
   color:   rgb(125, 204, 204);
   text-decoration:none;
+  font-size: 1.2vw;
 }
 .desktop-toolbar-wrapper a:hover {
   text-decoration:underline;
@@ -42,4 +38,20 @@
   border-radius: 5%/15%;
   padding-left:1%;
   padding-right: 1%;
+}
+@media (min-width:2000px) {
+  .mat-toolbar {
+    width: 62vw;
+  }
+}
+@media (max-width:1000px) {
+  .desktop-toolbar-wrapper a {
+    font-size: 1.4vw;
+  }
+  .mat-toolbar {
+    width: 98vw;
+  }
+  .desktop-toolbar-wrapper {
+    width: 96vw;
+  }
 }

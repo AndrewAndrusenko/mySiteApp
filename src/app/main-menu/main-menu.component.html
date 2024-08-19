@@ -1,7 +1,5 @@
-<div class="wrapper">
-  <mat-toolbar>
     <ng-container *ngIf="deviceType==='Mobile'">
-      <button mat-icon-button   [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>
+      <button mat-icon-button   [matMenuTriggerFor]="menu" style="color: aliceblue;"><mat-icon>menu</mat-icon>
         <mat-menu #menu="matMenu">
           <button mat-menu-item>#Education</button>
           <button mat-menu-item>#About</button>
@@ -12,7 +10,10 @@
         </mat-menu>
       </button>
     </ng-container>
-    <ng-container *ngIf="deviceType==='Desktop'">
+<div class="wrapper">
+  <ng-container *ngIf="deviceType==='Desktop'">
+  <mat-toolbar>
+
       <div class="desktop-toolbar-wrapper">
         <a href="#"  (click)="navigateToSection('AAA')">{{myName}}</a>
         <a href="#Education" (click)="navigateToSection('education')">Education</a>
@@ -22,6 +23,6 @@
         <a href="#Projects" (click)="navigateToSection('Projects')">Projects</a>
         <a href="https://github.com/AndrewAndrusenko" class="gitRef">Github Profile</a>
       </div>
-    </ng-container>
-  </mat-toolbar>
+    </mat-toolbar>
+  </ng-container>
 </div>

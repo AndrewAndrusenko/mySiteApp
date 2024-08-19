@@ -7,12 +7,12 @@
   z-index: 10; 
 }
 .desktop {
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: 14vw;
+  margin-right: 14vw;
 }
 .mobile {
-  margin-left: 2vw;
-  margin-right: 2vw;
+  margin-left: 0vw;
+  margin-right: 0vw;
 }
 .imgDesk {
   width: 20%;
@@ -24,52 +24,39 @@
   width:55w;
   height: 50vh;
 }
-#about {
+.about-desktop {
   display: flex;
   padding-top: 10vh;
+  width: 100%;
 }
-#experience {
-  margin-top: 4vh;
-  display:grid;
-  width: 100%; 
-  gap: 2vh;
-  color:var(--mainFontColor)
-}
-#experience h1{
-  text-align: center;
-  font-size: 4em;
-}
-.experience-card {
-  align-items: center;
-  width: 40vw;
-  height: 30vh;
-  background-color: black;
-  border-radius: 15px;
-  border-style: solid;
-  border-width: 2px;
-  padding: 2%;
-}
-
-.experience-card h3 {
-  font-size: 3em;
-  text-align: center;
-}
-.side2 {
-  background-color: rgb(64, 88, 88);
-  justify-self:flex-end;
-}
-.experience-card p{
-  text-align: center;
-  font-size: 2em;
-  line-height: 1.2;
+.about-mobile {
+  display: flex;
+  padding-top: 1vh;
+  top:0;
+  margin-left: 2vw;
 }
 #aam-core{
-  margin-top: 4vh;
+  margin-top: 8vh;
  }
  #aam-core img{
   max-width: 110%;
   border-radius: 2%/4%;
   margin-left: -4vw;
+ }
+ #aam-core h3{
+  font-size: 2vw;
+  font-weight: bold;
+  color:rgb(156, 158, 158);
+ }
+ #aam-core a{
+  text-decoration:underline;
+  cursor:pointer;
+  color: yellowgreen;
+  font-weight: bold;
+  font-size: 1.5vw;
+  margin-top: auto; 
+  margin-left: auto; 
+  padding-bottom: 1.5vh;
  }
 .BP-charts-section {
   margin-top: 4vh;
@@ -89,4 +76,10 @@
 .active {
   transform: translateY(0px);
   opacity: 1;
+}
+@media (max-width:1000px) {
+  .desktop {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
 }

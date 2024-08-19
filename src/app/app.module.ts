@@ -11,14 +11,16 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { SkillsBoxComponent } from './skills-box/skills-box.component';
 import { AboutSectionComponent } from './about-section/about-section.component';
-import { TypingAnimationComponent } from './typing-animation/typing-animation.component'
+import { TypingAnimationComponent } from './typing-animation/typing-animation.component';
+import { TimelineExperienceComponent } from './timeline-experience/timeline-experience.component'
 @NgModule({
   declarations: [
     AppComponent,
     MainMenuComponent,
     SkillsBoxComponent,
     AboutSectionComponent,
-    TypingAnimationComponent
+    TypingAnimationComponent,
+    TimelineExperienceComponent
   ],
   imports: [
     BrowserModule,

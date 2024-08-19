@@ -5,25 +5,38 @@
   text-align: center;
 }
 .skill-main-container h1 {
-  font-size: 2.8em;
+  font-size: 2.5vw;
   font-weight: bold;
+  color: white;
 }
 .skill-main-container h2 {
-  font-size: 2.5em;
+  font-size: 1.2vw;
   line-height: 1.2;
 }
 .skill-boxes-contrainer {
   display: flex;
-  gap: 4vw;
+  justify-content: space-between;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+.skill-boxes-contrainer.centered {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
 }
 .skill-boxes-contrainer h2 {
-  font-size: 2.5em;;
+  font-size: 2vw;;
   margin-top: 2%;
   margin-bottom: 1vh ;
 }
+.tilt-box-wrap {
+  perspective: 1000px;
+  position: relative;
+  transition: all 0.6s ease-out;
+}
 .skill-box {
   width: 30vw;
-  height: 30vh;
+  height: 32vh;
   border-width: 2px;
   border-radius: 15px;
   border-style: solid;
@@ -31,24 +44,65 @@
   -webkit-box-shadow:0 0 1vw var(--boxShadowColor);
   -moz-box-shadow: 0 0 1vw  var(--boxShadowColor);
   box-shadow:0 0 1vw  var(--boxShadowColor);
+  transition: all 0.6s ease-out;
 }
+@media (max-width:1000px) {
+  .skill-box {
+    width: 80vw;
+    height: 30vw;
+  }
+  .skill-boxes-contrainer {
+    display:grid;
+    gap: 2vh;
+    justify-content: center;
+  }
+}
+.t_over {
+  width: 33.333%;
+  height: 33.333%;
+  position: absolute;
+  z-index: 1;
+}
+.t_over:nth-child(1) {left: 0; top:0}
+.t_over:nth-child(2) {left: 33.333%; top:0}
+.t_over:nth-child(3) {left: 66.666%; top:0}
+.t_over:nth-child(4) {left: 0; top:33.333%;}
+.t_over:nth-child(5) {left: 33.333%; top:33.333%;}
+.t_over:nth-child(6) {left: 66.666%; top:33.333%;}
+.t_over:nth-child(7) {left: 0; top:66.666%;}
+.t_over:nth-child(8) {left: 33.333%; top:66.666%;}
+.t_over:nth-child(9) {left: 66.666%; top:66.666%;}
+.t_over:nth-child(1):hover ~.skill-box {transform: rotateX(-20deg) rotateY(20deg)}
+.t_over:nth-child(2):hover ~.skill-box {transform: rotateX(-20deg) rotateY(0deg)}
+.t_over:nth-child(3):hover ~.skill-box {transform: rotateX(-20deg) rotateY(-20deg)}
+.t_over:nth-child(4):hover ~.skill-box {transform: rotateX(0deg) rotateY(20deg)}
+.t_over:nth-child(5):hover ~.skill-box {transform: rotateX(0deg) rotateY(0deg)}
+.t_over:nth-child(6):hover ~.skill-box {transform: rotateX(0deg) rotateY(-20deg)}
+.t_over:nth-child(7):hover ~.skill-box {transform: rotateX(20deg) rotateY(20deg)}
+.t_over:nth-child(8):hover ~.skill-box {transform: rotateX(20deg) rotateY(0deg)}
+.t_over:nth-child(9):hover ~.skill-box {transform: rotateX(20deg) rotateY(-20deg)}
+
 .skill-item {
   display:inline-flex;
   margin-left: 0.5vw;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  margin-bottom: 0.7vw;
+  padding-left: 0.4vw;
+  padding-right: 0.4vw;
+  padding-top: 0.4vw;
+  padding-bottom: 0.4vw;
   border-color: rgb(59, 53, 53);
   border-width: 2px;
   border-style: solid;
-  font-size: 1em;
   border-radius: 15px;
   align-items: center; 
   min-width: 7vw;
 }
+.skill-item img{
+  width: 3vh;
+  height: 3vh;
+}
 .skill-item p{
-  font-size: bold;
-  margin-left: 5%;
-  margin-top:5%
+  font-size: 1vw;
+  margin-left: 0.4vw;
+  margin-top: 0.4vw;
 }

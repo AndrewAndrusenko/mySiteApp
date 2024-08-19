@@ -1,7 +1,10 @@
+* {
+  line-height: 1vw;
+}
 #cursor {
   animation: blink 1s linear infinite;
   color: blue;
-  font-size: 1.3em; 
+  font-size: 1.9vw; 
 }
 @keyframes blink {
   0% {
