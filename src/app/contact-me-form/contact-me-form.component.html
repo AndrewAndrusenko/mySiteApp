@@ -1,0 +1,34 @@
+<div class="title-wrap">
+  <p class="m-h1">Contact Me</p>
+  <p class="m-h2">Please let me know if you need any further information</p>
+  <p class="m-h2">I will be glad to discuss any new opportunities</p>
+</div>
+<div class="contact-me-wrap">
+  <form [formGroup]="contactForm">
+    <div class="send-wrap">
+      <p >Send a message </p>
+      <img src="./assets/paper-plane.png" >
+    </div>
+    <mat-form-field>
+      <input matInput appereance="fill" placeholder="Email" formControlName="email"  >
+    </mat-form-field>
+    <p class="m-error" *ngIf="contactForm.invalid&&email?.touched">Required: Please fill in the email address</p>
+    <mat-form-field >
+      <input matInput placeholder="Name" formControlName="name" >
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Subject" formControlName="msgSubj" >
+    </mat-form-field>
+    <mat-form-field class="msg">
+      <textarea matInput placeholder="Message" formControlName="messageText"></textarea>
+    </mat-form-field>
+    <div class="button-wrap">
+      <button 
+        [disabled]="contactForm.invalid" mat-raised-button (click)="sendToTelegram()"  
+        [matTooltipDisabled]="contactForm.valid"
+        matTooltip="Disabled: Please fill in the email address" >
+        Send
+      </button>
+    </div>
+  </form>
+</div>

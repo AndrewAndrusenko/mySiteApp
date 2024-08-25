@@ -1,7 +1,7 @@
     <ng-container *ngIf="deviceType==='Mobile'">
       <button mat-icon-button   [matMenuTriggerFor]="menu" style="color: aliceblue;"><mat-icon>menu</mat-icon>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>#Education</button>
+          <button mat-menu-item>#Resume</button>
           <button mat-menu-item>#About</button>
           <button mat-menu-item>#Skills</button>
           <button mat-menu-item>#Experience</button>
@@ -15,12 +15,12 @@
   <mat-toolbar>
 
       <div class="desktop-toolbar-wrapper">
-        <a href="#"  (click)="navigateToSection('AAA')">{{myName}}</a>
-        <a href="#Education" (click)="navigateToSection('education')">Education</a>
-        <a href="#About" (click)="navigateToSection('about')">About</a>
+        <a href="#" (click)="navigateToSection('AAA')">{{myName}}</a>
+        <a href="#" (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf','CV Andrew Andrusenko')">Resume</a>
         <a href="#Skills" (click)="navigateToSection('skills')">Skills</a>
         <a href="#Experience" (click)="navigateToSection('experience')">Experience</a>
-        <a href="#Projects" (click)="navigateToSection('Projects')">Projects</a>
+        <a href="#AAM-core" (click)="navigateToSection('aam-core')">Projects</a>
+        <a href="#Contact" (click)="navigateToSection('contact')">Contact</a>
         <a href="https://github.com/AndrewAndrusenko" class="gitRef">Github Profile</a>
       </div>
     </mat-toolbar>

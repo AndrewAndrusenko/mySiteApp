@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon'
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule} from '@angular/material/icon'
+import { MatMenuModule} from '@angular/material/menu';
+import { MatButtonModule} from '@angular/material/button';
 import { SkillsBoxComponent } from './skills-box/skills-box.component';
 import { AboutSectionComponent } from './about-section/about-section.component';
 import { TypingAnimationComponent } from './typing-animation/typing-animation.component';
-import { TimelineExperienceComponent } from './timeline-experience/timeline-experience.component'
+import { TimelineExperienceComponent } from './timeline-experience/timeline-experience.component';
+import { ContactMeFormComponent } from './contact-me-form/contact-me-form.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule} from '@angular/material/form-field'; 
+import { MatInputModule } from '@angular/material/input'; 
+import { MatTooltipModule} from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +28,8 @@ import { TimelineExperienceComponent } from './timeline-experience/timeline-expe
     SkillsBoxComponent,
     AboutSectionComponent,
     TypingAnimationComponent,
-    TimelineExperienceComponent
+    TimelineExperienceComponent,
+    ContactMeFormComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,14 @@ import { TimelineExperienceComponent } from './timeline-experience/timeline-expe
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

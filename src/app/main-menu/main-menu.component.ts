@@ -28,13 +28,15 @@ export class MainMenuComponent {
         this.deviceType='Unknown'
       break;
     }
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    console.log(this.deviceType);
   }
   navigateToSection(anchor:string):void {
-    console.log('anchor',anchor);
     this.viewportScroller.scrollToAnchor(anchor);
+  }
+  openPDF (url:string,title:string) {
+    let newTab = window.open(url,'_blank')
+    setTimeout(() => {
+      newTab? (newTab as Window).document.write('<title>My PDF File Title</title>'):null;
+    }, 500);
   }
 }
 

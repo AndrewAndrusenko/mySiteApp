@@ -25,6 +25,9 @@ html, body {
   font:inherit;
   color:inherit;
 } 
-.test {
-  color: yellowgreen;
+.snackbar-success {
+  background-color: rgb(91, 143, 180);
+  color: rgb(232, 233, 238);
+  white-space: pre-wrap;
+  padding: 1%;
 }
