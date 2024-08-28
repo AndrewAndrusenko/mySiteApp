@@ -9,9 +9,11 @@
 }
 .title-box h1 {
   font-size: 2.5vw;
+  line-height: 4vh;
   font-weight: bold;
 }
 .title-box h2 {
+  margin-top: 1vh;
   font-size: 1.2vw;
 }
 .timeline {
@@ -200,6 +202,70 @@
     border-right: 1vw solid var(--themeColor);
     left:-1.2vw; 
     border-left: none;
+  }
+}
+@media (max-width:480px) {
+  .title-box h1 {
+    font-size:6vw;
+  }
+  .title-box h2 {
+    font-size: 3.5vw;
+    line-height: 1.2;
+    padding: 0.2vw;
+  }
+  .timeline::after {
+    left:7vw
+  }
+  .container {
+    width: 84vw;
+  }
+  .left-container {
+    left:16vw;
+  }
+  .right-container {
+    left:16vw
+  }
+  .period-info {
+    display: none;
+  }
+  .right-container .period-info {
+    left: -16vw;
+    font-size: 1.3vw; 
+  }
+  .timeline-img {
+    left:-10vw;
+    width: 3vw;
+  }
+  .right-container img{
+    left:-10vw
+  } 
+  .text-box {
+    margin-top: 2vh;
+    font-size: 3.5vw;
+    line-height: 1.4;
+  }
+  .left-box {
+    transform: translateX(150px);
+  }
+  .active-box {
+    opacity: 1 !important;
+    transform: translateX(0px);
+    transition: all 2s ease;
+  }
+  .left-container-arrow {
+    transform: scale(3);
+  }
+  .right-container-arrow {
+    transform: scale(3);
+  }
+  .logos-img {
+    width: 12vw;
+    height: 12vw;
+    margin-top: 2vw;
+    margin-LEFT: 2vw;
+  }
+  .title-text-box-info h2 {
+    font-size: 4vw;
   }
 }
 @keyframes movedown {

@@ -1,3 +1,36 @@
+:host {
+  --toolBarColor : rgb(18, 39, 83,0.5); 
+  --menuColor : aliceblue;
+}
+.mobile-toolbar-wrapper {
+  display: flex;
+  width: 100vw;
+
+}
+.name-wrap {
+  width: 86vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+}
+.mobile-toolbar-wrapper mat-toolbar{
+  height: 6vh;
+  color: var(--menuColor)
+}
+.mobile-toolbar-wrapper a {
+  color:  var(--menuColor);
+  text-decoration:none;
+  vertical-align: middle;
+}
+::ng-deep .cust-menu {
+  background-color:  rgb(18, 39, 83,0.5); 
+  width: 100vw;
+}
+.mat-menu-item {
+  color:aliceblue;
+  font-size: 2.5vh;
+}
 .wrapper {
   width: 100%; 
   display: flex; 
@@ -39,6 +72,10 @@
   padding-left:1%;
   padding-right: 1%;
 }
+.gitRefMobile {
+  color:aliceblue;
+  font-size: 2.5vh;
+}
 @media (min-width:2000px) {
   .mat-toolbar {
     width: 62vw;
@@ -54,4 +91,9 @@
   .desktop-toolbar-wrapper {
     width: 96vw;
   }
+@media (max-width:480px) {
+  .mat-toolbar {
+    width: 100vw;
+  }
+}
 }

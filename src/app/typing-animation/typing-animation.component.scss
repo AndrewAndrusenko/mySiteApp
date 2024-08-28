@@ -1,6 +1,16 @@
 * {
   line-height: 1vw;
 }
+.typingBlockying-block {
+  font-size: 1.9vw; 
+  font-weight: bold;
+}
+.typingBlockying-block span{
+  color:rgb(98, 81, 168); 
+}
+.typingBlockying-block h1 {
+  color: aliceblue;
+}
 #cursor {
   animation: blink 1s linear infinite;
   color: blue;
@@ -12,5 +22,13 @@
   }
   50% {
     opacity: 0%;
+  }
+}
+@media (max-width:480px) {
+  .typingBlockying-block  {
+    font-size: 6vw;
+  }
+  #cursor {
+    font-size: 6vw; 
   }
 }

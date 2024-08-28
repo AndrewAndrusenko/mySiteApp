@@ -47,7 +47,7 @@ export class AppComponent implements AfterViewInit
     }
   }
   ngOnInit(): void {
-/*     VANTA.TOPOLOGY({
+    VANTA.TOPOLOGY({
       el: "#animated-background",
       mouseControls: false,
       touchControls: false,
@@ -56,7 +56,7 @@ export class AppComponent implements AfterViewInit
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00
-    }) */
+    })
   }
   ngAfterViewInit(): void {
 /*     VANTA.WAVES({
@@ -88,5 +88,5 @@ export class AppComponent implements AfterViewInit
     this.bg.removeChild(this.canvas2)
     this.bg.removeChild(this.canvas[0])
   }
-  openPDF (url:string) {window.open(url,'_blank')}
+
 }

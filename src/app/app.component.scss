@@ -1,5 +1,5 @@
 #animated-background {
-  height: 5000px; 
+  // height: 5000px; 
   background-color: rgb(0, 34, 34);
 }
 .menu-container {
@@ -14,16 +14,6 @@
   margin-left: 0vw;
   margin-right: 0vw;
 }
-.imgDesk {
-  width: 20%;
-  height: 20%;
-}
-.imgMobile {
-  margin-left: 15vw;
-  margin-top: 1vh;
-  width:55w;
-  height: 50vh;
-}
 .about-desktop {
   display: flex;
   padding-top: 10vh;
@@ -31,83 +21,15 @@
 }
 .about-mobile {
   display: flex;
-  padding-top: 1vh;
+  padding-top: 10vh;
   top:0;
   margin-left: 2vw;
 }
 #aam-core{
   margin-top: 8vh;
- }
- .title-container {
-  display: flex;
- }
- #aam-core img{
-  max-width: 110%;
-  border-radius: 2%/4%;
-  margin-left: -4vw;
- }
- .title-container-text {
-  margin-left: 1vw; 
-  margin-top: auto; 
- }
- #aam-core h3{
-  font-size: 2vw;
-  font-weight: bold;
-  color: var(--mainFontColor);
- }
- #aam-core a{
-  text-decoration:underline;
-  cursor:pointer;
-  color: yellowgreen;
-  font-weight: bold;
-  font-size: 1.5vw;
-  margin-top: auto; 
-  margin-left: auto; 
-  padding-bottom: 1.5vh;
- }
-.BP-charts-section {
-  display: inline-flex;
+}
+#bp-charts{
   margin-top: 4vh;
-  text-align: center; 
-  border-radius:2%/20%;
-  border-style: solid;
-  border-width: 2px; 
-  padding: 1vw; 
-  border-color:  var(--mainFontColor);
-  width: 100%;
-}
-.chart-title-wrap {
-  display: flex;
-  align-items : center;
-}
-.bp-charts-title {
-  margin-left: 1vw; 
-  align-items: center;
-  margin-top: 1vw;
-}
-.BP-charts-section h3{
-  font-size: 1.5vw;
-  color: var(--mainFontColor);
-  line-height: 1vw;
-}
-.BP-charts-section img{
-  width: 5vw;
-  height: 5vw;
-}
-.BP-charts-section button{
-  background-color: rgb(28, 143, 143); 
-  color: white; 
-  font-size: 1.2vw;
-  height: 5vh;
-}
-.bp-charts-buttons {
-  margin-left: 4vw;
-  display: flex ;
-  gap: 1vw;
-  align-items: center;
-}
-.BP-charts-section .extended-button{
-  background-color: rgb(42, 91, 124);
 }
 .contact-me-section {
   margin-top: 4vh;
@@ -123,35 +45,8 @@
   opacity: 1;
 }
 @media (max-width:1000px) {
-  .desktop {
+/*   .desktop {
     margin-left: 1vw;
     margin-right: 1vw;
-  }
-  .title-container-text {
-    margin-bottom: 1vh;
-  }
-  #aam-core img{
-    max-width: 98%;
-    margin-left: 0vw;
-  }
-  #aam-core h3{
-    line-height: 0.5vw;
-  }
-  #aam-core a{
-    margin-left: auto; 
-    margin-right: 4vw;
-  }
-  .BP-charts-section {
-    width: 96%;
-  }
-  .bp-charts-buttons {
-    gap:6vw;
-    margin-left: 11vw;
-  }
-  .BP-charts-section button{
-    font-size: 1.4vw;
-  }
-  .BP-charts-section h3{
-    font-size: 1.7vw;
-  }
+  } */
 }

@@ -82,22 +82,47 @@
   color: rgba(var(--text-color));
 }
 @media (max-width:1000px) {
+  .m-h1{
+    font-size: 3vw;
+  }
+  .m-h2{
+    font-size: 1.4vw;
+  }
   .contact-me-wrap form {
     width: 66vw;
   }
   .mat-form-field {
     width: 65vw;
   }
-  .contact-me-wrap button {
-    width: 66vw;
-  }
   .mat-form-field.msg {
     width: 65vw;
   }
+  .contact-me-wrap button {
+    width: 66vw;
+  }
+
+}
+@media (max-width:480px) {
   .m-h1{
-    font-size: 3vw;
+    font-size: 6vw;
   }
   .m-h2{
-    font-size: 1.4vw;
+    font-size: 4vw;
+    line-height: 1.2;
+  }
+  .contact-me-wrap form {
+    width: 86vw;
+  }
+  .send-wrap p {
+    font-size: 4vw;
+  }
+  .mat-form-field {
+    width: 85vw;
+  }
+  .mat-form-field.msg {
+    width: 85vw;
+  }
+  .contact-me-wrap button {
+    width: 86vw;
   }
 }

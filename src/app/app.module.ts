@@ -20,6 +20,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 import { HttpClientModule } from '@angular/common/http';
+import { AamCoreInfoComponent } from './aam-core-info/aam-core-info.component';
+import { BpProcessChartsComponent } from './bp-process-charts/bp-process-charts.component';
+import { FooterContactComponent } from './footer-contact/footer-contact.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { HttpClientModule } from '@angular/common/http';
     AboutSectionComponent,
     TypingAnimationComponent,
     TimelineExperienceComponent,
-    ContactMeFormComponent
+    ContactMeFormComponent,
+    AamCoreInfoComponent,
+    BpProcessChartsComponent,
+    FooterContactComponent
   ],
   imports: [
     BrowserModule,

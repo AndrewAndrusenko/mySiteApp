@@ -1,0 +1,23 @@
+.footer-wrap {
+  margin-top: 4vh;
+  padding-bottom: 2vh;
+  display: grid;
+  justify-content: center;
+}
+.footer-wrap h1 {
+  color: aliceblue;
+  text-align: center;
+}
+.icon-container {
+  display: inline-flex;
+  gap: 2vw;
+  justify-content: space-around;
+}
+.icon-container  img {
+  width: 4vh;
+} 
+@media (max-width:480px) {
+  .icon-container {
+    gap: 6vw;
+  }
+}
