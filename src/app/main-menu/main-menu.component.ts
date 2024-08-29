@@ -14,6 +14,11 @@ export class MainMenuComponent {
     private viewportScroller:ViewportScroller) 
     { }
   ngOnInit(): void {
+    console.log('window.innerHeigh',window.innerHeight);
+    let offset = (window.innerHeight<600? 40 : 30)
+    let i = 1/(100 / document.documentElement.clientHeight)* offset
+    console.log('i',i);
+    this.viewportScroller.setOffset([1,i])
     switch (true) {
       case this.deviceService.isDesktop():
           this.deviceType='Desktop'
@@ -32,11 +37,8 @@ export class MainMenuComponent {
   navigateToSection(anchor:string):void {
     this.viewportScroller.scrollToAnchor(anchor);
   }
-  openPDF (url:string,title:string) {
-    let newTab = window.open(url,'_blank')
-    setTimeout(() => {
-      newTab? (newTab as Window).document.write('<title>My PDF File Title</title>'):null;
-    }, 500);
+  openPDF (url:string) {
+    window.open(url,'_blank')
   }
 }
 

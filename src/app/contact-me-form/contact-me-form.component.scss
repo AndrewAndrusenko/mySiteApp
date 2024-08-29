@@ -112,6 +112,9 @@
   }
   .contact-me-wrap form {
     width: 86vw;
+    -webkit-box-shadow:0 0 3vw var(--boxShadowColor);
+    -moz-box-shadow: 0 0 3vw  var(--boxShadowColor);
+    box-shadow:0 0 3vw  var(--boxShadowColor);
   }
   .send-wrap p {
     font-size: 4vw;

@@ -243,6 +243,9 @@
     margin-top: 2vh;
     font-size: 3.5vw;
     line-height: 1.4;
+    -webkit-box-shadow:0 0 3vw var(--boxShadowColor);
+    -moz-box-shadow: 0 0 3vw  var(--boxShadowColor);
+    box-shadow:0 0 3vw  var(--boxShadowColor);
   }
   .left-box {
     transform: translateX(150px);

@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit
   deviceType:string=''
   name = 'Angular';
   bg :any
+  winHight :number
   canvas: HTMLCollectionOf<HTMLCanvasElement>;
   canvas2: HTMLCanvasElement;
   @ViewChildren('reveal') sectionsToReveal :QueryList<ElementRef>
@@ -45,9 +46,11 @@ export class AppComponent implements AfterViewInit
         this.deviceType='Unknown'
       break;
     }
+    this.winHight = window.innerHeight
+
   }
   ngOnInit(): void {
-    VANTA.TOPOLOGY({
+/*     VANTA.TOPOLOGY({
       el: "#animated-background",
       mouseControls: false,
       touchControls: false,
@@ -56,7 +59,7 @@ export class AppComponent implements AfterViewInit
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00
-    })
+    }) */
   }
   ngAfterViewInit(): void {
 /*     VANTA.WAVES({

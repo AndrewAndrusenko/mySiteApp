@@ -75,6 +75,9 @@
 @media (max-width: 480px) {
   .BP-charts-section {
     display: grid;
+    -webkit-box-shadow:0 0 3vw var(--boxShadowColor);
+    -moz-box-shadow: 0 0 3vw  var(--boxShadowColor);
+    box-shadow:0 0 3vw  var(--boxShadowColor);
   }
   .chart-title-wrap {
     display: flex;

@@ -67,6 +67,9 @@ a {
     max-width: 98%;
     margin-left: 0vw;
   }
+  img:hover{
+    transform: rotate(270deg) scale(1.5); 
+  }
   h3{
     font-size: 4vw;
     line-height: 4vw;

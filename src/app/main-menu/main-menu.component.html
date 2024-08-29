@@ -3,7 +3,7 @@
   <mat-toolbar>
       <button mat-icon-button   [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>
         <mat-menu #menu="matMenu" class="cust-menu">
-          <button mat-menu-item (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf','CV Andrew Andrusenko')">Resume</button>
+          <button mat-menu-item (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf')">Resume</button>
           <button mat-menu-item (click)="navigateToSection('skills')">Skills</button>
           <button mat-menu-item (click)="navigateToSection('experience')">Experience</button>
           <button mat-menu-item (click)="navigateToSection('aam-core')">Projects</button>
@@ -21,12 +21,12 @@
   <ng-container *ngIf="deviceType==='Desktop'">
   <mat-toolbar>
       <div class="desktop-toolbar-wrapper">
-        <a href="#" (click)="navigateToSection('AAA')">{{myName}}</a>
-        <a href="#" (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf','CV Andrew Andrusenko')">Resume</a>
-        <a href="#Skills" (click)="navigateToSection('skills')">Skills</a>
-        <a href="#Experience" (click)="navigateToSection('experience')">Experience</a>
-        <a href="#AAM-core" (click)="navigateToSection('aam-core')">Projects</a>
-        <a href="#Contact" (click)="navigateToSection('contact')">Contact</a>
+        <a href="./" (click)="navigateToSection('AAA')">{{myName}}</a>
+        <a href="./" (click)="openPDF('../assets/CV_AndrewAndrusenko.pdf')">Resume</a>
+        <a href="./#Skills" (click)="navigateToSection('skills')">Skills</a>
+        <a href="./#Experience" (click)="navigateToSection('experience')">Experience</a>
+        <a href="./#AAM-core" (click)="navigateToSection('aam-core')">Projects</a>
+        <a href="./#Contact" (click)="navigateToSection('contact')">Contact</a>
         <a href="https://github.com/AndrewAndrusenko" class="gitRef" target="_blank">Github Profile</a>
       </div>
     </mat-toolbar>

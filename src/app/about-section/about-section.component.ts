@@ -12,10 +12,10 @@ export class AboutSectionComponent {
     private viewportScroller:ViewportScroller
    ){}
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    let i = 1/(100 / document.documentElement.clientHeight)*30
-    this.viewportScroller.setOffset([1,i])
+    console.log('window.innerHeigh',window.innerHeight);
+    let offset = (window.innerHeight<600? 40 : 30)
+    let i = 1/(100 / document.documentElement.clientHeight)* offset
+    console.log('i',i);
   }
   navigateToSection(anchor:string):void {
     this.viewportScroller.scrollToAnchor(anchor);
