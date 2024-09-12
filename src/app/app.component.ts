@@ -1,21 +1,18 @@
-import { AfterViewInit, Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChildren} from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 declare var VANTA:any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit
-{
 
-  title = 'mySiteApp';
+export class AppComponent 
+{
+  title = 'Andrew Andrusenko';
   deviceType:string=''
   name = 'Angular';
-  bg :any
-  winHight :number
-  canvas: HTMLCollectionOf<HTMLCanvasElement>;
-  canvas2: HTMLCanvasElement;
   @ViewChildren('reveal') sectionsToReveal :QueryList<ElementRef>
   @HostListener('document:scroll', ['$event'])
   onScrollReveal(event: Event) {  
@@ -46,8 +43,6 @@ export class AppComponent implements AfterViewInit
         this.deviceType='Unknown'
       break;
     }
-    this.winHight = window.innerHeight
-
   }
   ngOnInit(): void {
 /*     VANTA.TOPOLOGY({
@@ -60,36 +55,6 @@ export class AppComponent implements AfterViewInit
       scale: 1.00,
       scaleMobile: 1.00
     }) */
-  }
-  ngAfterViewInit(): void {
-/*     VANTA.WAVES({
-      el: "#animated-background",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x43104
-    }) */
-/*     VANTA.NET({
-      el: "#animated-background",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00
-    }) */
-  }
-  stopAnimation() {
-    this.canvas = document.getElementsByClassName('vanta-canvas') as HTMLCollectionOf<HTMLCanvasElement>
-    this.canvas2 = document.getElementById('defaultCanvas0') as HTMLCanvasElement
-    this.bg = (document.getElementById('animated-background') as HTMLElement )
-    this.bg.removeChild(this.canvas2)
-    this.bg.removeChild(this.canvas[0])
   }
 
 }

@@ -17,7 +17,6 @@ export class MainMenuComponent {
     console.log('window.innerHeigh',window.innerHeight);
     let offset = (window.innerHeight<600? 40 : 30)
     let i = 1/(100 / document.documentElement.clientHeight)* offset
-    console.log('i',i);
     this.viewportScroller.setOffset([1,i])
     switch (true) {
       case this.deviceService.isDesktop():

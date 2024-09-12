@@ -15,7 +15,6 @@ export class AboutSectionComponent {
     console.log('window.innerHeigh',window.innerHeight);
     let offset = (window.innerHeight<600? 40 : 30)
     let i = 1/(100 / document.documentElement.clientHeight)* offset
-    console.log('i',i);
   }
   navigateToSection(anchor:string):void {
     this.viewportScroller.scrollToAnchor(anchor);

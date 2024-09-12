@@ -1,5 +1,7 @@
 #animated-background {
-  height: 5000px; 
+/*   background-image: url("../assets/background/unsplash2.jpg");
+  background-size: auto; */
+  // height: 6000px; 
   background-color: rgb(0, 34, 34);
 }
 .menu-container {
@@ -7,6 +9,7 @@
   z-index: 10; 
 }
 .desktop {
+  background-image: ('../assets/background/unsplash.jpg');
   margin-left: 14vw;
   margin-right: 14vw;
 }
