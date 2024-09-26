@@ -56,11 +56,6 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "./src/scripts/three.min.js",
-              "./src/scripts/p5.min.js",
-              "./src/scripts/vanta.topology.min.aaa.js",
-              "./src/scripts/vanta.waves.min.js",
-              "./src/scripts/vanta.net.min.js"
             ]
           },
           "configurations": {

@@ -1,22 +1,39 @@
 .title-container {
-   display: flex;
- }
-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.title-wrap {
+  display: flex;
+}
+.title-wrap img {
+  width: 5vw;
+  height: 5vw;
+  margin-left: 0;
+  margin-bottom: 1hv;
+}
+.slide-img {
   max-width: 110%;
   border-radius: 2%/4%;
   margin-left: -4vw;
- }
- .title-container-text {
+}
+.title-container-text {
   margin-left: 1vw; 
   margin-top: auto; 
- }
+  display: grid;
+  align-items: flex-end;
+}
+.mobile-ref-wrap {
+  display: none;
+}
 h3{
   font-size: 2vw;
   font-weight: bold;
   color: var(--mainFontColor);
   color: white;
+  margin-bottom: 1hv;
  }
-a {
+a{
   text-decoration:underline;
   cursor:pointer;
   color: yellowgreen;
@@ -25,29 +42,33 @@ a {
   margin-top: auto; 
   margin-left: auto; 
   padding-bottom: 1.5vh;
- }
- .title-container-text a{
-  display: none;
+}
+.ref-wrap {
+  display: grid;
 }
  @media (max-width:1000px) {
   .title-container-text {
     margin-bottom: 1vh;
   }
   .title-container img {
-    width: 8vw;
-    height: 8vw;
+    width: 5vw;
+    height: 5vw;
   }
-  img{
+  .slide-img{
     max-width: 98%;
     margin-left: 0vw;
   }
   h3{
-    line-height: 0.5vw;
+    font-size: 1.5vw;
+    line-height: 1vh;
+    margin-bottom: 0.5vh;
   }
   .desktop-ref {
     margin-left: auto; 
     margin-right: 4vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vh;
+    padding-bottom: 0;
   }
   .title-container-text a{
     display: none;
@@ -57,7 +78,6 @@ a {
   .title-container-text {
     width: 100%;
     margin-bottom: 0vh;
-    // background-color: red;
   }
   .title-container img {
     width: 10vw;
@@ -77,15 +97,18 @@ a {
     margin-bottom: 0;
   }
   .title-container-text a{
-    margin-left: auto; 
-    // line-height: 3.5vw;
-    font-size: 3.5vw;
+    font-size: 3vw;
     font-weight: normal;
     display: initial;
-    // margin-right: 4vw;
+    margin-left: 0;
+    padding-bottom: 0;
+  }
+  .mobile-ref-wrap {
+    display: flex;
+    width: 120%;
+    justify-content: space-between;
   }
   .desktop-ref {
     display: none;
-
   }
 }
