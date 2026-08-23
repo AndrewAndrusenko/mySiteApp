@@ -48,6 +48,7 @@
         & > .skill-box {
             width: 30vw;
             height: 33vh;
+            min-height: 280px;
             border: 1px solid vars.$line---extra; 
             border-radius: 12px;
             padding: 20px;

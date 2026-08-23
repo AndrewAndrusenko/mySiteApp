@@ -29,6 +29,7 @@ export class AboutSectionComponent {
       panelClass: 'dialog-project',
       minWidth: '90vw',
       minHeight: '90vh',
+      //maxHeight: '96vh'
     });
     ref.componentRef?.setInput('project', project);
   }

@@ -25,10 +25,10 @@ export class ProjectInfoComponent {
     this.scroll(container, direction);
   }
   openFullscreen(imagePath: string) {
-    if (window.innerWidth <= 768) {
+   // if (window.innerWidth <= 768) {
       this.selectedImage = imagePath;
       const dialog = document.querySelector('dialog');
       dialog?.showModal();
-    }
+    //}
   }
 }
