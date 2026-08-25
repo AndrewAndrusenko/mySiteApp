@@ -30,10 +30,14 @@
         }
     }
     &-contact {
-        margin-left: -48px;
         display: flex;
         align-items: center;
         gap: 8px;
+    }
+    &-language {
+      display: flex; 
+      flex-direction: row; 
+      gap:4px; 
     }
 }
 .mobile-menu-button {
@@ -43,6 +47,15 @@
     display: flex;
     top:8px;
     left: 3vw;
+  }
+}
+.mobile-lang-button {
+  display: none;
+  @include mobile {
+    position: absolute;
+    display: flex;
+    top:10px;
+    left: 150px;
   }
 }
 ::ng-deep .mobile-menu {

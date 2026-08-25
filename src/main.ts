@@ -1,16 +1,18 @@
-import { provideHttpClient, withInterceptors, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptors,
+} from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { IconBaseService } from './app/services/icon-base.service';
 import { inject, provideAppInitializer } from '@angular/core';
+import { LanguageService } from './app/services/language.service';
 
 bootstrapApplication(AppComponent, {
-    providers: [
-        provideHttpClient(withInterceptors([])),
-        provideAppInitializer(()=>{
-            const iconBaseService = inject(IconBaseService);
-            return iconBaseService.prepareIcons();
-        })
-    ]
-})
-  .catch(err => console.error(err));
+  providers: [
+    provideHttpClient(withInterceptors([])),
+    provideAppInitializer(() => {
+      const languageService = inject(LanguageService);
+      return languageService.loadLanguage();
+    }),
+  ],
+}).catch((err) => console.error(err));

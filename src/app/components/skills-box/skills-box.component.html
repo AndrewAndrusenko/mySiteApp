@@ -1,6 +1,6 @@
 <div class="skill-main-container">
-  <h1>Hard Skills</h1> 
-  <h2 >Here are some of my skills on which I have been working on for the past 5 years.</h2>
+  <h1>{{'hard_skills' | translate}}</h1> 
+  <h2 >{{'skills_introduce' | translate}}</h2>
   <div class="skill-boxes-contrainer">
     @for ( skillBox of skillData; track skillBox.title ) {
         <div class="tilt-box-wrap">
@@ -8,7 +8,7 @@
                 <span class="t_over"></span>
             }
             <div class="skill-box">
-                <h2>{{skillBox.title}}</h2>
+                <h2>{{skillBox.title | translate}}</h2>
                 @for ( skill of skillBox.skills ; track skill ) {
                     <div class="skill-item">
                       <img [src]="'assets/skills-logos/' + skill.img" [alt]="skill.alt||skill.name" [style.width]="skill?.width">

@@ -1,16 +1,19 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { IProjects } from '../../models/shared-models';
 import { MatDialogClose } from '@angular/material/dialog';
+import { LanguageService } from '../../services/language.service';
+import { TranslatePipe } from '../../services/translate.pipe';
 
 @Component({
   selector: 'project-info',
   templateUrl: './project-info.component.html',
   styleUrls: ['./project-info.component.scss'],
-  imports: [MatIconModule, MatDialogClose],
+  imports: [MatIconModule, MatDialogClose,TranslatePipe],
 })
 export class ProjectInfoComponent {
   public project = input.required<IProjects>();
+  lang = inject(LanguageService).currentLang
   public selectedImage: string = '';
   scroll(container: HTMLDivElement, direction: 'left' | 'right') {
     const scrollAmount = container.clientWidth;

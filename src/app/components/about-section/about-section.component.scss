@@ -33,10 +33,10 @@ main {
   & > .about-me {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 55vw;
     min-width: 835px;
     margin-right: 8vw;
-    font-size: 1.5vw;
+    font-size: vars.$heading---l;
     color: vars.$text---primary;
     font-weight: 300;
     @include mobile {
@@ -67,6 +67,7 @@ main {
       display: flex;
       flex-direction: row;
       gap: 12px;
+      margin-bottom: 12px;
       @include mobile {
         gap:0px;
         margin-bottom: 8px;

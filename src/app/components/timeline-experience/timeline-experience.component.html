@@ -1,11 +1,11 @@
 <div class="title-box">
-    <h1>Experience</h1>
-    <h2>My experience as a developer and financial expert in various companies and projects</h2>
+    <h1>{{'experience' | translate}}</h1>
+    <h2>{{'my_exp_introduce' | translate}}</h2>
 </div>
 <div class="timeline">
     @for (expItem of this.expData; track expItem.company) {
         <div  class="item-box" [class.item-box-left]="$even" [class.item-box-right]="$odd" >
-          <p class="period-info">{{expItem.period2||expItem.period}}</p>
+          <p class="period-info">{{lang() === 'Ru'? expItem.periodRu||expItem.period2||expItem.period : expItem.period2||expItem.period }}</p>
           <img  appComponentInView [inViewThreshold]="0.5" class="timeline-img" [src]="'assets/companies-logos/'+ expItem.logo" 
           [style.background-color]="expItem.logo_backgroud"
           >
@@ -16,14 +16,14 @@
                 [style.padding]="expItem.padding"
                 [style.background-color]="expItem.logo_backgroud">
               <div class="info" >
-                <h2 style="margin: 0">{{expItem.position}}</h2>
-                <div>{{expItem.company}}</div> 
-                <div>{{expItem.period}}</div>
+                <h2 style="margin: 0">{{expItem.position[lang()]}}</h2>
+                <div>{{expItem.company[lang()]}}</div> 
+                <div>{{lang() === 'Ru'? expItem.periodRu||expItem.period : expItem.period}}</div>
               </div>
             </div>
             <ul>
                 @for (bullet of expItem.bullets ; track bullet) {
-                  <li>{{bullet}}</li>
+                  <li>{{bullet[lang()]}}</li>
                 }
             </ul>
           </div>

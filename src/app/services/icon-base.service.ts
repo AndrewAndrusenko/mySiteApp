@@ -30,11 +30,11 @@ export class IconBaseService {
         'arrow-left-s-line', 
         'arrow-right-s-line',
     ])
-    prepareIcons() {
-        const iconRegistry = inject(MatIconRegistry);
-        const sanitizer = inject(DomSanitizer);
-        this.iconsStore.forEach(icon=>{
-            iconRegistry.addSvgIcon(icon, sanitizer.bypassSecurityTrustResourceUrl('assets/icons/'+icon+'.svg'));
-        })
+    constructor() {
+      const iconRegistry = inject(MatIconRegistry);
+      const sanitizer = inject(DomSanitizer);
+      this.iconsStore.forEach(icon=>{
+          iconRegistry.addSvgIcon(icon, sanitizer.bypassSecurityTrustResourceUrl('assets/icons/'+icon+'.svg'));
+      })
     }
 }

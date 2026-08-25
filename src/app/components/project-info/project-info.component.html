@@ -3,26 +3,16 @@
     <div class="first-line">
       <div class="project-title">
         <mat-icon [svgIcon]="project().icon"></mat-icon>
-        <span class="base-color">{{ project().title }}</span>
+        <span class="base-color">{{ project().title[lang()] }}</span>
       </div>
     </div>
-    <!--   <div class="project-bullets">
-      @for (bullet of project().bullets; track bullet) {
-        <div class="project-bullets-item">
-          <mat-icon svgIcon="checkbox-circle-fill"></mat-icon>
-          <span style="line-height: normal; width: 90%">
-            {{ bullet }}
-          </span>
-        </div>
-      }
-    </div> -->
     <div class="project-links">
       <div class="project-demo">
         @for (demo of project().demo_urls; track demo) {
           <div class="demo-item">
             <mat-icon svgIcon="mac-fill"></mat-icon>
             <a [href]="demo.url" target="_blank">
-              Live Demo: {{ demo.label }}
+              {{'live_demo' | translate}}: {{ demo.label }}
             </a>
           </div>
         }
@@ -32,10 +22,10 @@
           <div class="demo-item">
             <mat-icon svgIcon="github-fill"></mat-icon>
             @if (repo.repository_private) {
-              <div>Code Repository: {{ repo.repository_text }}</div>
+              <div>{{'repo_code' | translate}}: {{ repo.repository_text? repo.repository_text[lang()] : '' }}</div>
             } @else {
               <a [href]="repo.repository_url" target="_blank">
-                Code Repository: {{ repo.repository_text }}
+                {{'repo_code' | translate}}: {{ repo.repository_text? repo.repository_text[lang()] : '' }}
               </a>
             }
           </div>

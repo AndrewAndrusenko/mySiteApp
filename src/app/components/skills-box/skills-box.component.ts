@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../services/translate.pipe';
+import { LocalizationKey } from '../../models/localizations';
 interface ISkill{
     name:string,
     img:string,
@@ -8,14 +10,15 @@ interface ISkill{
     height?:string
 }
 interface ISkillBox {
-    title:string,
+    title:LocalizationKey,
     skills:ISkill[],
     cssClass?:string
 }
 @Component({
     selector: 'app-skills-box',
     templateUrl: './skills-box.component.html',
-    styleUrls: ['./skills-box.component.scss']
+    styleUrls: ['./skills-box.component.scss'],
+    imports:[TranslatePipe]
 })
 export class SkillsBoxComponent {
     public skillData:ISkillBox[] = []
@@ -168,19 +171,19 @@ export class SkillsBoxComponent {
 
         this.skillData = [
             {
-                title:'Frontend',
+                title:'frontend',
                 skills:frontSkills
             },
             {
-                title:'Angular',
+                title:'angular',
                 skills:AngularSkills
             },
             {
-                title:'Backend',
+                title:'backend',
                 skills:BackSkills
             },
             {
-                title:'Others',
+                title:'others',
                 skills:OtherSkills
             },
         ]

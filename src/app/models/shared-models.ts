@@ -4,15 +4,15 @@ interface IDemoUrl {
 }
 interface IRepository {
     repository_private:boolean,
-    repository_text?:string
+    repository_text?:{'En':string,'Ru':string}
     repository_url?:string,
 }
 export interface IProjects {
     id:number,
-    title:string,
+    title:{'En':string,'Ru':string},
     demo_urls:IDemoUrl[],
     repositories:IRepository[]
     icon:string,
-    bullets:string[]
+    bullets:{'En':string,'Ru':string}[]
     slides:string[]
 }

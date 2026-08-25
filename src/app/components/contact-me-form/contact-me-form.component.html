@@ -1,36 +1,36 @@
 <div class="title-wrap">
-  <p class="m-h1">Contact Me</p>
-  <p class="m-h2">Please let me know if you need any further information</p>
-  <p class="m-h2">I will be glad to discuss any new opportunities</p>
+  <p class="m-h1">{{'contact_me'|translate}}</p>
+  <p class="m-h2">{{'let_me_know'|translate}}</p>
+  <p class="m-h2">{{'glad_discuss'|translate}}</p>
 </div>
 <div class="contact-me-wrap">
   <form [formGroup]="contactForm">
     <div class="send-wrap">
       <img src="assets/paper-plane.png" >
-      <p >Send a message (TG:Russia via VPN) </p>
+      <p >{{'send_me'|translate}} </p>
     </div>
     <mat-form-field>
-      <input matInput appereance="fill" placeholder="Email" formControlName="email"  >
+      <input matInput appereance="fill" [placeholder]="'email'|translate" formControlName="email"  >
     </mat-form-field>
     @if (contactForm.invalid&&email?.touched) {
-      <p class="m-error">Required: Please fill in the email address</p>
+      <p class="m-error">{{'email_required'|translate}}</p>
     }
     <mat-form-field >
-      <input matInput placeholder="Name" formControlName="name" >
+      <input matInput [placeholder]="'name'|translate" formControlName="name" >
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Subject" formControlName="msgSubj" >
+      <input matInput [placeholder]="'subject'|translate" formControlName="msgSubj" >
     </mat-form-field>
     <mat-form-field class="msg">
-      <textarea matInput placeholder="Message" formControlName="messageText"></textarea>
+      <textarea matInput [placeholder]="'message'|translate" formControlName="messageText"></textarea>
     </mat-form-field>
     <div class="button-wrap">
       <button
         [disabled]="contactForm.invalid" mat-raised-button (click)="sendToTelegram()"
-        matTooltip="Disabled: Please fill in the email address" 
+        [matTooltip]="'send_disabled_2'|translate" 
         [matTooltipDisabled]="contactForm.valid"
         >
-        {{contactForm.valid? 'Send' : 'Send: please fill in the email address '}}
+        {{(contactForm.valid? 'send' : 'send_disabled')|translate}}
       </button>
     </div>
   </form>

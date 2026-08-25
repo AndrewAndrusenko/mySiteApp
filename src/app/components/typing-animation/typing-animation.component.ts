@@ -1,18 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, computed, effect, inject, Inject } from '@angular/core';
 import { Subject } from 'rxjs';
+import { LanguageService } from '../../services/language.service';
+import { TranslatePipe } from '../../services/translate.pipe';
 
 @Component({
     selector: 'app-typing-animation',
     templateUrl: './typing-animation.component.html',
-    styleUrls: ['./typing-animation.component.scss']
+    styleUrls: ['./typing-animation.component.scss'],
+    imports:[TranslatePipe]
 })
 export class AppTypingAnimationComponent {
-  expertiseSet:string[] =['Full Stack Developer','Financial Expert','Frontend Developer', 'Backend Developer'];
+  expertiseSet:string[] =[];
+  expertiseSetEn:string[] =['Full-stack Developer','Financial Expert','Frontend Developer', 'Backend Developer'];
+  expertiseSetRu:string[] =['Full-stack разработчик...', 'Финансовый эксперт...', 'Frontend-разработчик...', 'Backend-разработчик...']
   nextExpert:Subject<number> = new Subject();
   expertInd:number=0;
   expertDesc:string;
   cursor:string='|';
   timerTyping: ReturnType<typeof setTimeout> []=[];
+  private readonly languageService = inject(LanguageService)
+  constructor() {
+    effect(()=>this.expertiseSet =  this.languageService.currentLang() === 'En'? this.expertiseSetEn : this.expertiseSetRu)
+  }
+  ngOnInit(): void {
+    this.expertiseSet =  this.languageService.currentLang() === 'En'? this.expertiseSetEn : this.expertiseSetRu
+  }
   ngAfterViewInit(): void {
     this.typingSubscription()
     setTimeout(() => {this.nextExpert.next(this.expertInd)}, 200);

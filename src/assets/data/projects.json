@@ -2,7 +2,10 @@
   "projects": [
     {
       "id": 1,
-      "title": "Business Process & Electronic Document Management System",
+      "title": {
+        "En": "Business Process & Electronic Document Management System",
+        "Ru": "Система управления бизнес-процессами и электронным документооборотом"
+      },
       "demo_urls": [
         {
           "label": "Demo Company 1 Instance",
@@ -16,14 +19,26 @@
       "repositories": [
         {
           "repository_private": true,
-          "repository_text": "Private (Available for live review during interviews)"
+          "repository_text": {
+            "En": "Private (Available for live review during interviews)",
+            "Ru": "Приватный (Доступен для разбора во время интервью)"
+          }
         }
       ],
       "icon": "briefcase-4-fill",
       "bullets": [
-        "Deleveloped in-house interactive data visualization library",
-        "Library covers business processes, contracts diagrams and provides functionality to manage these objects",
-        "Implemented new UI, design model, best practices. And more.."
+        {
+          "En": "Deleveloped in-house interactive data visualization library",
+          "Ru": "Разработал собственную интерактивную библиотеку визуализации данных"
+        },
+        {
+          "En": "Library covers business processes, contracts diagrams and provides functionality to manage these objects",
+          "Ru": "Библиотека охватывает бизнес-процессы, диаграммы контрактов и предоставляет функционал для управления этими объектами"
+        },
+        {
+          "En": "Implemented new UI, design model, best practices. And more..",
+          "Ru": "Внедрил новый пользовательский интерфейс, модель дизайна и лучшие практики. И многое другое..."
+        }
       ],
       "slides": [
         "assets/images/pro_slide1.jpg",
@@ -34,7 +49,10 @@
     },
     {
       "id": 2,
-      "title": "Asset Management Platform",
+      "title": {
+        "En": "Asset Management Platform",
+        "Ru": "Платформа для управления активами"
+      },
       "demo_urls": [
         {
           "label": "https://ppklrx85-5001.euw.devtunnels.ms/apps/aam/",
@@ -44,14 +62,26 @@
       "repositories": [
         {
           "repository_private": true,
-          "repository_text": "Private (Available for live review during interviews)"
+          "repository_text": {
+            "En": "Private (Available for live review during interviews)",
+            "Ru": "Приватный (Доступен для разбора во время интервью)"
+          }
         }
       ],
       "icon": "coins-fill",
       "bullets": [
-        "Ready-to-go asset management system from scratch",
-        "Comprehensive financial accounting system",
-        "Full-scale asset management model. And more.."
+        {
+          "En": "Ready-to-go asset management system from scratch",
+          "Ru": "Готовая к развертыванию система управления активами с нуля"
+        },
+        {
+          "En": "Comprehensive financial accounting system",
+          "Ru": "Комплексная система финансового учета"
+        },
+        {
+          "En": "Full-scale asset management model. And more..",
+          "Ru": "Полномасштабная модель управления активами. И многое другое..."
+        }
       ],
       "slides": [
         "assets/images/aam_slide0.jpg",
@@ -65,7 +95,10 @@
     },
     {
       "id": 3,
-      "title": "Stock quotes in real time",
+      "title": {
+        "En": "Stock quotes in real time",
+        "Ru": "Биржевые котировки в реальном времени"
+      },
       "demo_urls": [
         {
           "label": "https://ppklrx85-5001.euw.devtunnels.ms/apps/rtq/",
@@ -75,26 +108,44 @@
       "repositories": [
         {
           "repository_private": false,
-          "repository_text": "Main - Frontend-RealTime-StockQuotes-WSS",
+          "repository_text": {
+            "En": "Main - Frontend-RealTime-StockQuotes-WSS",
+            "Ru": "Основной репозиторий - Frontend-RealTime-StockQuotes-WSS"
+          },
           "repository_url": "https://github.com/AndrewAndrusenko/RealTime-StockQuotes-WSS-Frontend"
         },
         {
           "repository_private": false,
-          "repository_text": "Supporting - Backend-RealTime-StockQuotes-WSS",
+          "repository_text": {
+            "En": "Supporting - Backend-RealTime-StockQuotes-WSS",
+            "Ru": "Вспомогательный репозиторий - Backend-RealTime-StockQuotes-WSS"
+          },
           "repository_url": "https://github.com/AndrewAndrusenko/RealTime-StockQuotes-WS-Backend"
         }
       ],
       "icon": "exchange-box-fill",
       "bullets": [
-        "A real-time processing system with a stream rate of 50 ms",
-        "Stream management with RxJS buffering, refresh rate settings",
-        "WebSockets. Rendering optimization. And more.."
+        {
+          "En": "A real-time processing system with a stream rate of 50 ms",
+          "Ru": "Система обработки данных в реальном времени с частотой потока 50 мс"
+        },
+        {
+          "En": "Stream management with RxJS buffering, refresh rate settings",
+          "Ru": "Управление потоком с помощью буферизации RxJS и настроек частоты обновления"
+        },
+        {
+          "En": "WebSockets. Rendering optimization. And more..",
+          "Ru": "WebSockets. Оптимизация рендеринга. И многое другое..."
+        }
       ],
       "slides": ["assets/images/rtq_slide1.jpg", "assets/images/rtq_slide2.jpg"]
     },
     {
       "id": 4,
-      "title": "Flexible JWT authentication server",
+      "title": {
+        "En": "Flexible JWT authentication server",
+        "Ru": "Гибкий сервер аутентификации на базе JWT"
+      },
       "demo_urls": [
         {
           "label": "https://ppklrx85-5001.euw.devtunnels.ms/apps/ssngrx/",
@@ -104,19 +155,31 @@
       "repositories": [
         {
           "repository_private": false,
-          "repository_text": "Auth-Server-Frontend",
+          "repository_text": {
+            "En": "Auth-Server-Frontend",
+            "Ru": "Фронтенд сервера аутентификации (Auth-Server-Frontend)"
+          },
           "repository_url": "https://github.com/AndrewAndrusenko/Auth-Server-Frontend"
         },
         {
           "repository_private": false,
-          "repository_text": "Auth-Server-Backend",
+          "repository_text": {
+            "En": "Auth-Server-Backend",
+            "Ru": "Бэкенд сервера аутентификации (Auth-Server-Backend)"
+          },
           "repository_url": "https://github.com/AndrewAndrusenko/Auth-Server-Backend"
         }
       ],
       "icon": "lock-password-fill",
       "bullets": [
-        "The access and refresh token pattern",
-        "Easily connecting to other applications. And more.."
+        {
+          "En": "The access and refresh token pattern",
+          "Ru": "Паттерн использования access и refresh токенов"
+        },
+        {
+          "En": "Easily connecting to other applications. And more..",
+          "Ru": "Легкое подключение к другим приложениям. И многое другое..."
+        }
       ]
     }
   ]
