@@ -138,7 +138,12 @@
           "Ru": "WebSockets. Оптимизация рендеринга. И многое другое..."
         }
       ],
-      "slides": ["assets/images/rtq_slide1.jpg", "assets/images/rtq_slide2.jpg"]
+      "slides": [
+        "assets/images/rtq_slide0.jpg",
+        "assets/images/rtq_slide1.jpg",
+        "assets/images/rtq_slide2.jpg",
+        "assets/images/rtq_slide3.jpg"
+      ]
     },
     {
       "id": 4,
