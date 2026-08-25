@@ -87,11 +87,14 @@ main {
         min-height: 40px;
         @include mobile {
           min-height: 20px;
+          width: 95%;
         }
         & > mat-icon {
           @include mobile {
             width: 18px;
             height: 18px;
+            min-width: 18px;
+            min-height: 18px;
           }
         }
       }
