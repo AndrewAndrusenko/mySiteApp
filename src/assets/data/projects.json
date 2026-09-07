@@ -28,7 +28,7 @@
       "icon": "briefcase-4-fill",
       "bullets": [
         {
-          "En": "Deleveloped in-house interactive data visualization library",
+          "En": "Developed in-house interactive data visualization library",
           "Ru": "Разработал собственную интерактивную библиотеку визуализации данных"
         },
         {
@@ -36,8 +36,8 @@
           "Ru": "Библиотека охватывает бизнес-процессы, диаграммы контрактов и предоставляет функционал для управления этими объектами"
         },
         {
-          "En": "Implemented new UI, design model, best practices. And more..",
-          "Ru": "Внедрил новый пользовательский интерфейс, модель дизайна и лучшие практики. И многое другое..."
+          "En": "Implemented new UI, design model, best practices, and more..",
+          "Ru": "Внедрил новый пользовательский интерфейс, дизайн-систему и лучшие практики. И многое другое..."
         }
       ],
       "slides": [
@@ -79,7 +79,7 @@
           "Ru": "Комплексная система финансового учета"
         },
         {
-          "En": "Full-scale asset management model. And more..",
+          "En": "Full-scale asset management model. And more...",
           "Ru": "Полномасштабная модель управления активами. И многое другое..."
         }
       ],
@@ -134,8 +134,8 @@
           "Ru": "Управление потоком с помощью буферизации RxJS и настроек частоты обновления"
         },
         {
-          "En": "WebSockets. Rendering optimization. And more..",
-          "Ru": "WebSockets. Оптимизация рендеринга. И многое другое..."
+          "En": "WebSockets, rendering optimization, and more...",
+          "Ru": "WebSockets, оптимизация рендеринга, а также многое другое..."
         }
       ],
       "slides": [
@@ -179,7 +179,7 @@
       "bullets": [
         {
           "En": "The access and refresh token pattern",
-          "Ru": "Паттерн использования access и refresh токенов"
+          "Ru": "Паттерн использования access- и refresh-токенов"
         },
         {
           "En": "Easily connecting to other applications. And more..",
