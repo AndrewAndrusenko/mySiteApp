@@ -126,16 +126,24 @@
       "icon": "exchange-box-fill",
       "bullets": [
         {
-          "En": "A real-time processing system with a stream rate of 50 ms",
-          "Ru": "Система обработки данных в реальном времени с частотой потока 50 мс"
+          "En": "Zoneless & Signals & Virtual Scrolling",
+          "Ru": "Zoneless & Signals & Virtual Scrolling"
         },
         {
-          "En": "Stream management with RxJS buffering, refresh rate settings",
-          "Ru": "Управление потоком с помощью буферизации RxJS и настроек частоты обновления"
+          "En": "50ms Real-Time Ingestion: Built to handle high-frequency data streams",
+          "Ru": "50ms Real-Time Потоки: Архитектура рассчитана на высокоинтенсивные потоки данных"
         },
         {
-          "En": "WebSockets, rendering optimization, and more...",
-          "Ru": "WebSockets, оптимизация рендеринга, а также многое другое..."
+          "En": "Smart RxJS Buffering: UI Backpressure Management via Stream Buffering ",
+          "Ru": "Буферизация RxJS: Регулирировние нагрузки на UI за счет управления буфером потока "
+        },
+        {
+          "En": "Resilient WebSockets: Auto-Reconnect, backoff strategy, heartbeat ping and stream repetition",
+          "Ru": "WebSockets: Востановление подключения с экспоненциальной задержкой (backoff), пинг поддержания связи и перезапуск потоков"
+        },
+        {
+          "En": "Secure JWT Auto-Refresh: Seamlessly refreshing expired tokens in the background",
+          "Ru": "Безопасное автообновление JWT: Бесшовное, фоновое обновления истекших токенов"
         }
       ],
       "slides": [
